@@ -12,20 +12,22 @@ router.get('/', (req, res) => {
 
 //Search Restaurant
 router.get('/search', (req, res) => {
-  Restaurant.find((err, restaurants) => {
-    const keyword = req.query.keyword
-    if (err) return console.error(err)
-    const searchResult = restaurants.filter(restaurant => {
-      return (
-        restaurant.name.toLowerCase().includes(keyword.toLowerCase()) ||
-        restaurant.name_en.toLowerCase().includes(keyword.toLowerCase()) ||
-        restaurant.category.toLowerCase().includes(keyword.toLowerCase())
-      )
-    })
-    const emptyDate = searchResult.length === 0 ? true : false
-
-    res.render('index', { style: 'index.css', restaurants: searchResult, keyword, emptyDate })
-  })
+  const searchInput = req.query.keyword
+  const regex = new RegExp(searchInput, 'i')
+  Restaurant.find(
+    {
+      $or: [
+        { name: regex },
+        { name_en: regex },
+        { category: regex }
+      ]
+    },
+    (err, restaurants) => {
+      if (err) return console.error(err)
+      const emptyDate = restaurants.length === 0 ? true : false
+      return res.render('index', { style: 'index.css', restaurants, keyword: req.query.keyword, emptyDate })
+    }
+  )
 })
 
 // sort restaurant
