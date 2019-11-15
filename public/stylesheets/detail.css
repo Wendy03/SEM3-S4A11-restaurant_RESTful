@@ -78,6 +78,19 @@ header {
   margin-top: 150px;
 }
 
+.modal-title {
+  font-weight: 900;
+  font-family: DFKai-sb
+}
+
+.modal-body {
+  font-family: fantasy
+}
+
+.modal-footer {
+  border-top: none;
+}
+
 @media screen and (max-width: 768px) {
   .restaurant-show-title {
     font-size: 2rem;

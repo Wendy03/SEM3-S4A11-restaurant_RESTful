@@ -92,6 +92,19 @@ header {
   top: -7px;
 }
 
+.modal-title {
+  font-weight: 900;
+  font-family: DFKai-sb
+}
+
+.modal-body {
+  font-family: fantasy
+}
+
+.modal-footer {
+  border-top: none;
+}
+
 @media screen and (max-width: 992px) {
 
   .card img {
