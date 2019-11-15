@@ -39,6 +39,8 @@ const Restaurant = require('./models/restaurant')
 
 // 載入路由器
 app.use('/', require('./routes/home'))
+app.use('/', require('./routes/search'))
+app.use('/', require('./routes/sort'))
 app.use('/restaurants', require('./routes/restaurant'))
 
 // start and listen on the Express server
