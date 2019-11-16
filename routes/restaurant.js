@@ -3,12 +3,12 @@ const router = express.Router()
 const Restaurant = require('../models/restaurant')
 
 // 列出全部 Restaurant
-router.get('/', (req, res) => {
+router.get('/', (_req, res) => {
   return res.redirect('/')
 })
 
 // 新增一筆 restaurant 頁面
-router.get('/new', (req, res) => {
+router.get('/new', (_req, res) => {
   return res.render('new', { style: 'form.css' })
 })
 

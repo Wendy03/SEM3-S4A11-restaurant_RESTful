@@ -16,8 +16,8 @@ router.get('/search', (req, res) => {
     },
     (err, restaurants) => {
       if (err) return console.error(err)
-      const emptyDate = restaurants.length === 0 ? true : false
-      return res.render('index', { style: 'index.css', restaurants, keyword: req.query.keyword, emptyDate })
+      const isDataEmpty = restaurants.length === 0 ? true : false
+      return res.render('index', { style: 'index.css', restaurants, keyword: req.query.keyword, isDataEmpty })
     }
   )
 })

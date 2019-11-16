@@ -31,6 +31,10 @@ router.get('/:filter', (req, res) => {
       sort = { location: 'asc' }
       sortName = '地址:A-Z'
       break;
+
+    default:
+      sort = { _id: 'asc' }
+      break;
   }
   Restaurant.find({})
     .sort(sort)
