@@ -20,12 +20,12 @@
       </button>
 
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="/name-asc">店名:A-Z</a>
-        <a class="dropdown-item" href="/name-desc">店名:Z-A</a>
-        <a class="dropdown-item" href="/category-asc">類別:A-Z</a>
-        <a class="dropdown-item" href="/rating-asc">評分:高-低</a>
-        <a class="dropdown-item" href="/rating-desc">評分:低-高</a>
-        <a class="dropdown-item" href="/location-asc">地址:A-Z</a>
+        <a class="dropdown-item" href="/search?{{#if keyword}}keyword={{keyword}}&{{/if}}sort=name-asc">店名:A-Z</a>
+        <a class="dropdown-item" href="/search?{{#if keyword}}keyword={{keyword}}&{{/if}}sort=name-desc">店名:Z-A</a>
+        <a class="dropdown-item" href="/search?{{#if keyword}}keyword={{keyword}}&{{/if}}sort=category-asc">類別:A-Z</a>
+        <a class="dropdown-item" href="/search?{{#if keyword}}keyword={{keyword}}&{{/if}}sort=rating-asc">評分:高-低</a>
+        <a class="dropdown-item" href="/search?{{#if keyword}}keyword={{keyword}}&{{/if}}sort=rating-desc">評分:低-高</a>
+        <a class="dropdown-item" href="/search?{{#if keyword}}keyword={{keyword}}&{{/if}}sort=location-asc">地址:A-Z</a>
       </div>
     </div>
   </div>
