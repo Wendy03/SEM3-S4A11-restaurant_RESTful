@@ -27,12 +27,10 @@
 ```
 1.切換目錄到專案: cd SEM3-S4A10-restaurant_CRUD
 2.安裝套件: npm install
-3.Robo 3T localhost 上面按右鍵 Create Database，建立一個新的資料庫-restaurant
-4.Robo 3T restaurant資料庫中collection 右鍵建立 restaurants 資料夾
-5.終端機上執行 todoSeeder.js
- - cd ~/todo/models/seeds
- - node todoSeeder.js
- - 確認Robo 3T 資料已經建立了
+3.新增種子資料 -終端機上執行 restaurantSeeder.js
+- cd ~ models\seeds
+- node restaurantSeeder.js
+- 確認 Robo 3T 資料已經建立了
 ```
 
 ##### 3.執行程式
